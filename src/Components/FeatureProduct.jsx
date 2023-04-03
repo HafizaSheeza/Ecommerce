@@ -76,7 +76,7 @@ const Wrapper = styled.section`
       top: 15%;
       right: 20%;
       text-transform: uppercase;
-      background-color: ${({ theme }) => theme.color.white};
+      background-color: white;
       padding: 0.8rem 2rem;
       font-size: 1.2rem;
       border-radius: 2rem;
