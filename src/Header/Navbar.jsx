@@ -7,10 +7,10 @@ import { FiShoppingCart, FiMenu } from "react-icons/fi";
 // import { AiOutlineMenu } from "react-icons/Ai";
 import { MdOutlineClose } from "react-icons/Md";
 import { useCartContext } from "../Context/cart_context";
-import { useAuth0 } from "@auth0/auth0-react";
+
 import { Button } from "../Styled/Button";
 const Navbar = () => {
-    const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
+
 
     const [active, setActive] = useState();
 
@@ -37,35 +37,7 @@ const Navbar = () => {
                         <NavLink onClick={() => setActive(false)} className="nav-links" to='product'>Product</NavLink>
                     </li>
 
-                    {
-                        isAuthenticated && (
-                            <li className="user-name">
-                                {user.name}
-                            </li>
-                        )
-                    }
 
-                    {
-                        isAuthenticated ? (
-                            <li>
-
-                                <Button className="login-button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                                    Log Out
-                                </Button>
-
-                            </li>
-                        ) : (
-                            <li>
-
-                                <Button onClick={() => loginWithRedirect()} className="login-button">Login</Button>
-
-
-                            </li>
-                        )
-
-
-
-                    }
 
 
 

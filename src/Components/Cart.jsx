@@ -5,9 +5,9 @@ import { useCartContext } from '../Context/cart_context';
 import FormatPrice from '../Helper/FormatPrice';
 import { Button } from '../Styled/Button';
 import CartItem from './CartItem';
-import { useAuth0 } from '@auth0/auth0-react';
+
 const Cart = () => {
-  const { user, isAuthenticated } = useAuth0()
+
   // const { name, picture } = user;
   const { cart, clearCart, total_price, shipping_fee } = useCartContext();
   console.log(cart);
@@ -25,12 +25,7 @@ const Cart = () => {
 
 
       <div className="container">
-        {
-          isAuthenticated && (
-            <div className='profile-data'>  <img src={user.picture} alt={user.name} />
-              <h3>{user.name}</h3></div>
-          )
-        }
+
         <div className="cart_heading grid grid-five-column">
           <p>Item</p>
           <p className="cart-hide">Price</p>

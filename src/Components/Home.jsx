@@ -4,6 +4,7 @@ import Herosection from "./Herosection";
 import Service from "./Service";
 import Trusted from "./Trusted";
 import Womencard from "./Womencard";
+import React from "react";
 const Home = () => {
     const data = {
         id: "1",

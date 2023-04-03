@@ -8,8 +8,9 @@ import { CartProvider } from './Context/cart_context'
 import { Auth0Provider } from "@auth0/auth0-react";
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider
-    domain={JSON.stringify(import.meta.env)}
-    clientId={JSON.stringify(import.meta.env)}
+    domain="dev-lf2t7ktwqljapx1u.uk.auth0.com"
+    clientId="Lfpw4fnYde7CDRX60jlLDtAU9ZY6uizW"
+    // {JSON.stringify(import.meta.env)}
 
     authorizationParams={{
       redirect_uri: window.location.origin

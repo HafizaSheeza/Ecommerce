@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 const MyImage = ({ imgs = [{ alt: "" }] }) => {
   const [mainImage, setMainImage] = useState(imgs[0]);
-
+  useEffect(() => {
+    setMainImage(imgs[0])
+  }, [setMainImage])
   return (
     <Wrapper>
       <div className="grid grid-four-column" >
