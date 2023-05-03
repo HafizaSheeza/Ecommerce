@@ -5,4 +5,4 @@ const FormatPrice = ({ price }) => {
         maximumFractionDigits: 2,
     }).format(price / 100);
 }
-export default FormatPrice;
+export default FormatPrice;  
